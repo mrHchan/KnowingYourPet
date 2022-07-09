@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pets_nav_graph"
+    app:startDestination="@id/dogFragment">
+
+
+    <fragment
+        android:id="@+id/dogFragment"
+        android:name="com.knowingyourpet.ui.fragment.DogFragment"
+        android:label="DogFragment" >
+        <action
+            android:id="@+id/action_dogFragment_to_previewFragment"
+            app:destination="@id/previewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.knowingyourpet.ui.fragment.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_previewFragment"
+            app:destination="@id/previewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewFragment"
+        android:name="com.knowingyourpet.ui.fragment.PreviewFragment"
+        android:label="PreviewFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.knowingyourpet.ui.fragment.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_previewFragment"
+            app:destination="@id/previewFragment" />
+    </fragment>
+</navigation>
